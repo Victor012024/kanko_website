@@ -46,8 +46,10 @@ reservationForm.addEventListener("submit", async (e) => {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value.trim(),
     phone: document.getElementById("phone").value,
-    date: document.getElementById("time").value,
+    date: document.getElementById("date").value,
+    time: document.getElementById("time").value,
     guests: document.getElementById("guests").value,
+    occasionText: occasion.value === "yes" ? document.getElementById("occasion-text").value : "",
     addMessage: document.getElementById("add-ons").value,
   };
 
@@ -70,9 +72,14 @@ reservationForm.addEventListener("submit", async (e) => {
 });
 
 occasion.addEventListener("change", () => {
-  occasion_details.classList.toggle("hidden", occasion.value !== "yes");
-  let detailOccasion = occasion_details.value;
-  saveDetail.push(detailOccasion);
+  const isSpecial = occasion.value === "yes";
+  occasion_details.classList.toggle("hidden", !isSpecial);
+
+  if (isSpecial) {
+    console.log("Special occasion");
+  } else {
+    console.log("error");
+  }
 });
 
 scrollUp.addEventListener("click", () => {
