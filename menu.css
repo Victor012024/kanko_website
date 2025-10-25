@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
 
 .tab-btn:hover,
 .tab-btn.active {
-  background: #ff9f1c;
+  background: #f5741e;
   color: #fff;
 }
 
@@ -63,7 +63,7 @@ body::-webkit-scrollbar {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #ff9f1c;
+  background-color: #d35400;
   color: #fff;
   padding: 8px 15px;
   border-radius: 6px;
@@ -73,8 +73,8 @@ body::-webkit-scrollbar {
 }
 
 .back-home-btn:hover {
-  background-color: #ff7a00;
-  transform: translateY(-2px);
+  background-color: #d35400;
+  transform: translateY(-5px);
 }
 
 .section-title {
@@ -145,7 +145,7 @@ body::-webkit-scrollbar {
 }
 
 .add-btn {
-  background-color: #ff9f1c;
+  background-color: #f5741e;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -236,4 +236,132 @@ body::-webkit-scrollbar {
   width: 20px;
   height: 20px;
   filter: invert(1);
+}
+
+.checkout-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.checkout-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.checkout-content {
+  background: #fffaf7;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  transform: translateY(30px);
+  transition: transform 0.4s ease;
+}
+
+.checkout-modal.show .checkout-content {
+  transform: translateY(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #ff7a00;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff4d00;
+}
+
+.checkout-title {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.checkout-summary {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-right: 0.5rem;
+}
+
+.checkout-summary p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 4px;
+}
+
+.checkout-total-box {
+  background: #fff3e0;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.checkout-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.confirm-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.confirm-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.confirm-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background-color: #ff9f1c;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #ff7a00;
+  transform: translateY(-2px);
+}
+
+/* Scrollbar styling inside modal summary */
+.checkout-summary::-webkit-scrollbar {
+  width: 6px;
+}
+.checkout-summary::-webkit-scrollbar-thumb {
+  background: #ff9f1c;
+  border-radius: 6px;
 }

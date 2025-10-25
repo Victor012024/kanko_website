@@ -9,9 +9,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="menu.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <!-- Header -->
     <header class="header" id="header">
       <div class="menu-header">
         <a href="index.html" class="back-home-btn">
@@ -21,7 +21,6 @@
       </div>
     </header>
 
-    <!-- Category Navigation -->
     <nav class="menu-nav">
       <button class="tab-btn active" data-category="rice">Rice & Beans</button>
       <button class="tab-btn" data-category="swallow">Swallows</button>
@@ -32,7 +31,7 @@
       <div class="menu-container" id="menu-container">
         <div class="menu-category" data-category="rice">
           <article class="menu-item">
-            <img src="./IMAGES/jollof-rice.jpg" alt="Jollof Rice" />
+            <img src="./IMAGES/jollof-rice.jpg" alt="Jollof Rice" loading="lazy" />
             <h3>Jollof Rice</h3>
             <p>Spicy tomato rice served with fried plantain and chicken.</p>
             <span class="price">₦400</span>
@@ -40,7 +39,7 @@
           </article>
 
           <article class="menu-item">
-            <img src="./IMAGES/fried-rice.jpg" alt="Fried Rice" />
+            <img src="./IMAGES/fried-rice.jpg" alt="Fried Rice" loading="lazy" />
             <h3>Fried Rice</h3>
             <p>Golden rice stir-fried with vegetables, liver, and shrimp.</p>
             <span class="price">₦400</span>
@@ -48,7 +47,7 @@
           </article>
 
           <article class="menu-item">
-            <img src="./IMAGES/beans.jpg" alt="Beans & Bread" />
+            <img src="./IMAGES/beans.jpg" alt="Beans & Bread" loading="lazy" />
             <h3>Beans & Bread</h3>
             <p>Mashed beans (ewa agoyin) with soft Agege bread.</p>
             <span class="price">₦600</span>
@@ -58,7 +57,7 @@
 
         <div class="menu-category hidden" data-category="swallow">
           <article class="menu-item">
-            <img src="./IMAGES/amala.jpg" alt="Amala & Ewedu" />
+            <img src="./IMAGES/amala.jpg" alt="Amala & Ewedu" loading="lazy" />
             <h3>Amala & Ewedu</h3>
             <p>Yam flour served with ewedu soup, gbegiri, and assorted meat.</p>
             <span class="price">₦1500</span>
@@ -66,7 +65,7 @@
           </article>
 
           <article class="menu-item">
-            <img src="./IMAGES/semo.jpeg" alt="Semo & Egusi" />
+            <img src="./IMAGES/semo.jpeg" alt="Semo & Egusi" loading="lazy" />
             <h3>Semo & Egusi</h3>
             <p>Semovita served with rich egusi soup and assorted meat.</p>
             <span class="price">₦1200</span>
@@ -74,7 +73,7 @@
           </article>
 
           <article class="menu-item">
-            <img src="./IMAGES/eba.jpeg" alt="Eba & Okro" />
+            <img src="./IMAGES/eba.jpeg" alt="Eba & Okro" loading="lazy" />
             <h3>Eba & Okro</h3>
             <p>Garri meal paired with fresh okro soup and fish.</p>
             <span class="price">₦1000</span>
@@ -84,7 +83,7 @@
 
         <div class="menu-category hidden" data-category="soup">
           <article class="menu-item">
-            <img src="./IMAGES/egusi.jpg" alt="Egusi Soup" />
+            <img src="./IMAGES/egusi.jpg" alt="Egusi Soup" loading="lazy" />
             <h3>Egusi Soup</h3>
             <p>Melon seed soup cooked with spinach, palm oil, and beef.</p>
             <span class="price">₦1000</span>
@@ -92,7 +91,7 @@
           </article>
 
           <article class="menu-item">
-            <img src="./IMAGES/okra.jpg" alt="Okra Soup" />
+            <img src="./IMAGES/okra.jpg" alt="Okra Soup" loading="lazy"/>
             <h3>Okra Soup</h3>
             <p>Fresh okra cooked with palm oil, fish, and stock meat.</p>
             <span class="price">₦900</span>
@@ -110,6 +109,25 @@
       </div>
       <button id="checkout-btn">Checkout</button>
     </section>
+
+
+  
+<div id="checkout-modal" class="checkout-modal hidden">
+  <div class="checkout-content">
+    <button id="close-btn" class="close-btn">&times;</button>
+    <h2 class="checkout-title">Your Order Summary</h2>
+    <div id="checkout-summary" class="checkout-summary"></div>
+    <div class="checkout-total-box">
+      <p><strong>Total:</strong> ₦<span id="checkout-total">0</span></p>
+    </div>
+    <div class="checkout-actions">
+      <button id="confirm-btn" class="confirm-btn">Confirm Order</button>
+      <button id="cancel-btn" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
 
     <div class="back-to-top">
         <img src="./IMAGES/arrow.png" alt="back-to-top" />
