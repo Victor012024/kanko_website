@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Kanko Foods</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="menu-header">
+        <a href="index.html" class="back-home-btn">
+          <span>&larr;</span> Go Back Home
+        </a>
+        <h2 class="section-title">Full Menu</h2>
+      </div>
+    </header>
+
+    <!-- Category Navigation -->
+    <nav class="menu-nav">
+      <button class="tab-btn active" data-category="rice">Rice & Beans</button>
+      <button class="tab-btn" data-category="swallow">Swallows</button>
+      <button class="tab-btn" data-category="soup">Soups & Stews</button>
+    </nav>
+
+    <section class="menu-section">
+      <div class="menu-container" id="menu-container">
+        <div class="menu-category" data-category="rice">
+          <article class="menu-item">
+            <img src="./IMAGES/jollof-rice.jpg" alt="Jollof Rice" />
+            <h3>Jollof Rice</h3>
+            <p>Spicy tomato rice served with fried plantain and chicken.</p>
+            <span class="price">₦400</span>
+            <button class="add-btn">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <img src="./IMAGES/fried-rice.jpg" alt="Fried Rice" />
+            <h3>Fried Rice</h3>
+            <p>Golden rice stir-fried with vegetables, liver, and shrimp.</p>
+            <span class="price">₦400</span>
+            <button class="add-btn">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <img src="./IMAGES/beans.jpg" alt="Beans & Bread" />
+            <h3>Beans & Bread</h3>
+            <p>Mashed beans (ewa agoyin) with soft Agege bread.</p>
+            <span class="price">₦600</span>
+            <button class="add-btn">Add to Order</button>
+          </article>
+        </div>
+
+        <div class="menu-category hidden" data-category="swallow">
+          <article class="menu-item">
+            <img src="./IMAGES/amala.jpg" alt="Amala & Ewedu" />
+            <h3>Amala & Ewedu</h3>
+            <p>Yam flour served with ewedu soup, gbegiri, and assorted meat.</p>
+            <span class="price">₦1500</span>
+            <button class="add-btn">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <img src="./IMAGES/semo.jpeg" alt="Semo & Egusi" />
+            <h3>Semo & Egusi</h3>
+            <p>Semovita served with rich egusi soup and assorted meat.</p>
+            <span class="price">₦1200</span>
+            <button class="add-btn">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <img src="./IMAGES/eba.jpeg" alt="Eba & Okro" />
+            <h3>Eba & Okro</h3>
+            <p>Garri meal paired with fresh okro soup and fish.</p>
+            <span class="price">₦1000</span>
+            <button class="add-btn">Add to Order</button>
+          </article>
+        </div>
+
+        <div class="menu-category hidden" data-category="soup">
+          <article class="menu-item">
+            <img src="./IMAGES/egusi.jpg" alt="Egusi Soup" />
+            <h3>Egusi Soup</h3>
+            <p>Melon seed soup cooked with spinach, palm oil, and beef.</p>
+            <span class="price">₦1000</span>
+            <button class="add-btn">Add to Order</button>
+          </article>
+
+          <article class="menu-item">
+            <img src="./IMAGES/okra.jpg" alt="Okra Soup" />
+            <h3>Okra Soup</h3>
+            <p>Fresh okra cooked with palm oil, fish, and stock meat.</p>
+            <span class="price">₦900</span>
+            <button class="add-btn">Add to Order</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-section">
+      <h2>Your Order</h2>
+      <div id="order-list"></div>
+      <div class="order-summary">
+        Total: ₦<span id="order-total">0</span>
+      </div>
+      <button id="checkout-btn">Checkout</button>
+    </section>
+
+    <div class="back-to-top">
+        <img src="./IMAGES/arrow.png" alt="back-to-top" />
+      </div>
+
+    <script src="menu.js"></script>
+  </body>
+</html>
